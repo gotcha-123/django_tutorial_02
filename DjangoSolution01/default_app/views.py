@@ -13,4 +13,6 @@ def david(request):
     return HttpResponse("Hello, David!")
 
 def greet(request, name):
-    return render(request, "default_app/index.html")
+    return render(request, "default_app/greet.html", {
+        "name": name.capitalize()
+    })
